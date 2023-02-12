@@ -9,10 +9,6 @@ import { Employee } from './employee';
 export class EmployeeService {
 
   private baseURL = "http://127.0.0.1:8080/api/v1";
-  // private baseGetURL = "http://127.0.0.1:8080/api/v1/employees";
-  // private basePostURL = "http://127.0.0.1:8080/api/v1/create-employees";
-  // private basePutURL = "http://127.0.0.1:8080/api/v1/update-employees";
-  // private basedeleteURL = "http://127.0.0.1:8080/api/vi/delete-employee";
 
   constructor(private httpCLient: HttpClient) { }
 
