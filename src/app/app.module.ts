@@ -10,6 +10,7 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { SearchComponent } from './search/search.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2OrderModule } from 'ng2-order-pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    Ng2OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

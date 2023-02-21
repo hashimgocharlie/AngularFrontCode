@@ -37,14 +37,14 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th> First Name </th>
-            <th> Last Name </th>
-            <th> Email Id </th>
+            <th (click)="sort('firstName')"> First Name &nbsp;<i class="bi bi-sort-up"></i></th>
+            <th (click)="sort('lastName')"> Last Name &nbsp;<i class="fa fa-sort"></i></th>
+            <th (click)="sort('emailId')"> Email Id &nbsp;<i class="fa fa-sort"></i></th>
             <th> Actions </th>
         </tr>  
     </thead>
     <tbody>
-        <ng-container *ngFor = "let employee of employees | paginate: {itemsPerPage:5, currentPage:page};">
+        <ng-container *ngFor = "let employee of employees | orderBy: key: reverse | paginate: {itemsPerPage:5, currentPage:page};">
         <tr *ngIf="searchText === '' || employee.firstName.toLowerCase().includes(searchText)">
 
             <td> {{ employee.firstName }} </td>
