@@ -44,7 +44,7 @@
         </tr>  
     </thead>
     <tbody>
-        <ng-container *ngFor = "let employee of employees">
+        <ng-container *ngFor = "let employee of employees | paginate: {itemsPerPage:5, currentPage:page};">
         <tr *ngIf="searchText === '' || employee.firstName.toLowerCase().includes(searchText)">
 
             <td> {{ employee.firstName }} </td>
@@ -62,6 +62,8 @@
             </td>
         </tr>
     </ng-container>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
     </tbody>
+    
 </table>
 </div>

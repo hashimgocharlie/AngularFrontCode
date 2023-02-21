@@ -12,6 +12,7 @@ export class EmployeeListComponent implements OnInit{
 
   employees: Employee[];
   searchText: string= '';
+  page: number = 1;
 
   constructor(private employeeService: EmployeeService, 
     private router: Router) { }
