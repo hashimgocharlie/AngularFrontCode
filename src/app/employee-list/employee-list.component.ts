@@ -11,6 +11,7 @@ import { EmployeeService } from '../employee.service';
 export class EmployeeListComponent implements OnInit{
 
   employees: Employee[];
+  searchText: string= '';
 
   constructor(private employeeService: EmployeeService, 
     private router: Router) { }
@@ -42,6 +43,13 @@ export class EmployeeListComponent implements OnInit{
 
   viewEmployee(id: number){
     this.router.navigate(['employee-details', id]);
+  }
+
+  onSearchTextEntered(searchValue: string){
+
+    this.searchText= searchValue;
+    console.log(this.searchText);
+
   }
 
 }

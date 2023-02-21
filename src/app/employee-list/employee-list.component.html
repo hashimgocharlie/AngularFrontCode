@@ -1,3 +1,6 @@
+<div>
+    <app-search (searchTextChanged)="onSearchTextEntered($any($event))"></app-search>
+</div>
 <div class="col-md-6 offset-md-3">
 <h2>Employee List</h2>
 <div>
@@ -41,7 +44,9 @@
         </tr>  
     </thead>
     <tbody>
-        <tr *ngFor = "let employee of employees">
+        <ng-container *ngFor = "let employee of employees">
+        <tr *ngIf="searchText === '' || employee.firstName.toLowerCase().includes(searchText)">
+
             <td> {{ employee.firstName }} </td>
             <td> {{ employee.lastName }} </td>
             <td> {{ employee.emailId }} </td>
@@ -56,6 +61,7 @@
                 <button (click) = "viewEmployee(employee.id)" class="btn btn-info"> View </button>
             </td>
         </tr>
+    </ng-container>
     </tbody>
 </table>
 </div>
