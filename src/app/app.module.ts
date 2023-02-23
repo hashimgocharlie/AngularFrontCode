@@ -11,6 +11,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { SearchComponent } from './search/search.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2OrderModule } from 'ng2-order-pipe';
+import { EmployeeInlineEditComponent } from './employee-inline-edit/employee-inline-edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     CreateEmployeeComponent,
     UpdateEmployeeComponent,
     EmployeeDetailsComponent,
-    SearchComponent
+    SearchComponent,
+    EmployeeInlineEditComponent
   ],
   imports: [
     BrowserModule,
