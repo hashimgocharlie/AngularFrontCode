@@ -13,6 +13,7 @@ export class EmployeeListComponent implements OnInit{
   employees: Employee[];
   searchText: string= '';
   page: number = 1;
+  error:null;
 
   constructor(private employeeService: EmployeeService, 
     private router: Router) { }
@@ -26,6 +27,10 @@ export class EmployeeListComponent implements OnInit{
     this.employeeService.getEmployeesList().subscribe(data => {
       this.employees = data;
       console.log(data);
+    },
+    error => {
+      console.log(error);
+      this.error =error.message;
     });
   }
 

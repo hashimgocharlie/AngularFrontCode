@@ -11,6 +11,7 @@ import { EmployeeService } from '../employee.service';
 export class CreateEmployeeComponent implements OnInit{
 
   employee: Employee = new Employee();
+  error: null;
 
   constructor(private employeeService: EmployeeService, private router: Router){ 
 
@@ -36,7 +37,10 @@ export class CreateEmployeeComponent implements OnInit{
       console.log(data);
       this.goToEmployeeList();
     },
-    error => console.log(error));
+    error => {
+      console.log(error);
+      this.error =error.message;
+    });
   }
 
 }

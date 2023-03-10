@@ -1,0 +1,17 @@
+input.ng-valid {
+    border: 1px solid green;
+    border-right: 5px solid green;
+    box-shadow: 0 0 0 0.2rem rgb(0,137,10,.25);
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+    border-right: 5px solid darkred;
+    box-shadow: 0 0 0 0.2rem rgb(255, 43, 27, 25);
+}
+
+input.ng-pending {
+    border: 1px solid orange;
+    border-right: 5px solid orange;
+    box-shadow: 0 0 0 0.2rem rgb(255,127,2,.25);
+}
